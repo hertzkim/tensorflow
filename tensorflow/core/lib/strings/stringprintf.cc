@@ -83,7 +83,6 @@ string Printf(const char* format, ...) {
   va_list ap;
   va_start(ap, format);
   string result;
-  result.append("[hertzkim]");//ADD: for testing @hertzkim:2017.03.22
   Appendv(&result, format, ap);
   va_end(ap);
   return result;

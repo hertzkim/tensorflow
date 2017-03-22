@@ -31,6 +31,9 @@ Status Session::Run(const RunOptions& run_options,
                     const std::vector<string>& output_tensor_names,
                     const std::vector<string>& target_node_names,
                     std::vector<Tensor>* outputs, RunMetadata* run_metadata) {
+  //ADD: for tesing @hertzkim:2017.03.22
+  std::stringstream ss;
+  ss << "[hertzkim]";
   return errors::Unimplemented(
       "Run with options is not supported for this session.");
 }
