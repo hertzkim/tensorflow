@@ -884,7 +884,7 @@ Status BaseGPUDeviceFactory::GetValidDeviceIds(
       cc_major = 0;
       cc_minor = 0;
     }
-    LOG(INFO) << "Found device " << i << " with properties: "
+    LOG(INFO) << "[hertzkim]Found device " << i << " with properties: "
               << "\nname: " << description.name() << "\nmajor: " << cc_major
               << " minor: " << cc_minor << " memoryClockRate (GHz) "
               << description.clock_rate_ghz() << "\npciBusID "

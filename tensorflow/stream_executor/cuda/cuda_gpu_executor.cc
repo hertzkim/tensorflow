@@ -898,10 +898,9 @@ static int TryToReadNumaNode(const string &pci_bus_id, int device_ordinal) {
   int32 value;
   if (port::safe_strto32(content, &value)) {
     if (value < 0) {  // See http://b/18228951 for details on this path.
-      LOG(INFO) << "[Hi, hertzkim, How are you?]"; //ADD: for tesing @hertzkim:2017.03.22
       LOG(INFO) << "[hertzkim]successful NUMA node read from SysFS had negative value ("
                 << value << "), but there must be at least one NUMA node"
-                            ", so returning NUMA node zero";
+                           ", so returning NUMA node zero";
       fclose(file);
       return 0;
     }
