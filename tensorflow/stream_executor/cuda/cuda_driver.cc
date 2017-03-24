@@ -482,7 +482,7 @@ bool DeviceOptionsToContextFlags(DeviceOptions device_options, int *flags) {
 
   CUcontext former_context = CurrentContext();
   if (former_context != nullptr) {
-    LOG(WARNING) << "creating context when one is currently active; existing: "
+    LOG(WARNING) << "[hertzkim]creating context when one is currently active; existing: "
                  << former_context;
   }
 
